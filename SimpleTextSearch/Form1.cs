@@ -28,18 +28,21 @@ namespace SimpleTextSearch
 
           private void browseButton_Click(object sender, EventArgs e)
           {
-
-               browseFileDBox.ShowDialog();
-
-               if (browseFileDBox.ShowDialog() != DialogResult.OK) return;
-               dataReader = File.OpenText(browseFileDBox.FileName);
-
-               while (!dataReader.EndOfStream)
+               if (browseFileDBox.ShowDialog() == DialogResult.OK)
                {
-                    dataList.Add(dataReader.ReadLine());
-               }
+                    dataReader = File.OpenText(browseFileDBox.FileName);
 
-               dataReader.Close();
+                    while (!dataReader.EndOfStream)
+                    {
+                         dataList.Add(dataReader.ReadLine());
+                    }
+
+                    dataReader.Close();
+               }
+               else if (browseFileDBox.ShowDialog() == DialogResult.Cancel)
+               {
+                    
+               }
           }
      }
 }
