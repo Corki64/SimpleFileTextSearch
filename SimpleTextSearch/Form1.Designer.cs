@@ -1,6 +1,6 @@
 ﻿namespace SimpleTextSearch
 {
-     partial class Form1
+     partial class simpleTextSearch
      {
           /// <summary>
           /// Required designer variable.
@@ -79,7 +79,7 @@
                this.browseButton.Text = "Browse";
                this.browseButton.UseVisualStyleBackColor = true;
                // 
-               // Form1
+               // simpleTextSearch
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -89,8 +89,9 @@
                this.Controls.Add(this.textBox1);
                this.Controls.Add(this.label1);
                this.Controls.Add(this.searchButton);
-               this.Name = "Form1";
-               this.Text = "Form1";
+               this.Name = "simpleTextSearch";
+               this.Text = "Simple Text Search";
+               this.Load += new System.EventHandler(this.simpleTextSearch_Load);
                this.ResumeLayout(false);
                this.PerformLayout();
 
