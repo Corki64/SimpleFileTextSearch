@@ -31,10 +31,15 @@ namespace SimpleTextSearch
 
                browseFileDBox.ShowDialog();
 
-               if (DialogResult == DialogResult.OK)
+               if (browseFileDBox.ShowDialog() != DialogResult.OK) return;
+               dataReader = File.OpenText(browseFileDBox.FileName);
+
+               while (!dataReader.EndOfStream)
                {
-                    
+                    dataList.Add(dataReader.ReadLine());
                }
+
+               dataReader.Close();
           }
      }
 }
