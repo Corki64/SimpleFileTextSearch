@@ -34,6 +34,7 @@
                this.resultListBox = new System.Windows.Forms.ListBox();
                this.browseButton = new System.Windows.Forms.Button();
                this.browseFileDBox = new System.Windows.Forms.OpenFileDialog();
+               this.fileLocation = new System.Windows.Forms.Label();
                this.SuspendLayout();
                // 
                // searchButton
@@ -85,11 +86,20 @@
                // 
                this.browseFileDBox.FileName = "openFileDialog1";
                // 
+               // fileLocation
+               // 
+               this.fileLocation.AutoSize = true;
+               this.fileLocation.Location = new System.Drawing.Point(96, 116);
+               this.fileLocation.Name = "fileLocation";
+               this.fileLocation.Size = new System.Drawing.Size(0, 13);
+               this.fileLocation.TabIndex = 5;
+               // 
                // simpleTextSearch
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
                this.ClientSize = new System.Drawing.Size(546, 308);
+               this.Controls.Add(this.fileLocation);
                this.Controls.Add(this.browseButton);
                this.Controls.Add(this.resultListBox);
                this.Controls.Add(this.searchTextBox);
@@ -110,6 +120,7 @@
           private System.Windows.Forms.ListBox resultListBox;
           private System.Windows.Forms.Button browseButton;
           private System.Windows.Forms.OpenFileDialog browseFileDBox;
+          private System.Windows.Forms.Label fileLocation;
      }
 }
 

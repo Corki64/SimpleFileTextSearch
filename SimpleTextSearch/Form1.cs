@@ -32,6 +32,8 @@ namespace SimpleTextSearch
                {
                     dataReader = File.OpenText(browseFileDBox.FileName);
 
+                    fileLocation.Text = browseFileDBox.FileName;
+
                     while (!dataReader.EndOfStream)
                     {
                          dataList.Add(dataReader.ReadLine());
@@ -43,25 +45,32 @@ namespace SimpleTextSearch
                {
                     
                }
+               else
+               {
+                    
+               }
           }
 
           private void searchButton_Click(object sender, EventArgs e)
           {
+
+               var line = 0;
+
                if (dataList == null || dataList.Count == 0) 
                {
                     return;
                }
                else
                {
-                    var line = dataList.Count;
                     resultListBox.Items.Clear();
 
                     while (line < dataList.Count)
                     {
-                         if (dataList[line].Contains())
+                         if (dataList[line].Contains(searchTextBox.Text))
                          {
-                              
+                              resultListBox.Items.Insert(resultListBox.Items.Count, dataList[line]);
                          }
+                         line++;
                     }
                }
           }
