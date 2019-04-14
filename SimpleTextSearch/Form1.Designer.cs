@@ -30,7 +30,7 @@
           {
                this.searchButton = new System.Windows.Forms.Button();
                this.label1 = new System.Windows.Forms.Label();
-               this.textBox1 = new System.Windows.Forms.TextBox();
+               this.searchTextBox = new System.Windows.Forms.TextBox();
                this.resultListBox = new System.Windows.Forms.ListBox();
                this.browseButton = new System.Windows.Forms.Button();
                this.browseFileDBox = new System.Windows.Forms.OpenFileDialog();
@@ -44,6 +44,7 @@
                this.searchButton.TabIndex = 0;
                this.searchButton.Text = "Search";
                this.searchButton.UseVisualStyleBackColor = true;
+               this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
                // 
                // label1
                // 
@@ -54,12 +55,12 @@
                this.label1.TabIndex = 1;
                this.label1.Text = "Please enter the keyword or sentence:";
                // 
-               // textBox1
+               // searchTextBox
                // 
-               this.textBox1.Location = new System.Drawing.Point(207, 12);
-               this.textBox1.Name = "textBox1";
-               this.textBox1.Size = new System.Drawing.Size(331, 20);
-               this.textBox1.TabIndex = 2;
+               this.searchTextBox.Location = new System.Drawing.Point(207, 12);
+               this.searchTextBox.Name = "searchTextBox";
+               this.searchTextBox.Size = new System.Drawing.Size(331, 20);
+               this.searchTextBox.TabIndex = 2;
                // 
                // resultListBox
                // 
@@ -91,7 +92,7 @@
                this.ClientSize = new System.Drawing.Size(546, 308);
                this.Controls.Add(this.browseButton);
                this.Controls.Add(this.resultListBox);
-               this.Controls.Add(this.textBox1);
+               this.Controls.Add(this.searchTextBox);
                this.Controls.Add(this.label1);
                this.Controls.Add(this.searchButton);
                this.Name = "simpleTextSearch";
@@ -105,7 +106,7 @@
           #endregion
           private System.Windows.Forms.Button searchButton;
           private System.Windows.Forms.Label label1;
-          private System.Windows.Forms.TextBox textBox1;
+          private System.Windows.Forms.TextBox searchTextBox;
           private System.Windows.Forms.ListBox resultListBox;
           private System.Windows.Forms.Button browseButton;
           private System.Windows.Forms.OpenFileDialog browseFileDBox;

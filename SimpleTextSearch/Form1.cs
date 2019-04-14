@@ -20,7 +20,7 @@ namespace SimpleTextSearch
 
           StreamReader dataReader;
                
-          List<String> dataList = new List<string>();
+          List<String> dataList = new List<String>();
           private void simpleTextSearch_Load(object sender, EventArgs e)
           {
 
@@ -42,6 +42,27 @@ namespace SimpleTextSearch
                else if (browseFileDBox.ShowDialog() == DialogResult.Cancel)
                {
                     
+               }
+          }
+
+          private void searchButton_Click(object sender, EventArgs e)
+          {
+               if (dataList == null || dataList.Count == 0) 
+               {
+                    return;
+               }
+               else
+               {
+                    var line = dataList.Count;
+                    resultListBox.Items.Clear();
+
+                    while (line < dataList.Count)
+                    {
+                         if (dataList[line].Contains())
+                         {
+                              
+                         }
+                    }
                }
           }
      }
