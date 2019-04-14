@@ -9,6 +9,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/**
+ * This application will allow the user to search for a file.
+ * The user can then indicate a key or phrase to search in the file.
+ * It will then display the lines which had the results of the search
+ * indicated on a listBox.
+ *
+ * @author Luis Cortez(lac0084@auburn.edu)
+ * @version 041420191608
+ */
 namespace SimpleTextSearch
 {
      public partial class simpleTextSearch : Form
@@ -18,9 +27,9 @@ namespace SimpleTextSearch
                InitializeComponent();
           }
 
-          StreamReader dataReader;
-               
-          List<String> dataList = new List<String>();
+          private StreamReader dataReader;
+
+          private List<String> dataList = new List<String>();
           private void simpleTextSearch_Load(object sender, EventArgs e)
           {
 
