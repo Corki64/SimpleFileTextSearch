@@ -28,12 +28,12 @@
           /// </summary>
           private void InitializeComponent()
           {
-               this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
                this.searchButton = new System.Windows.Forms.Button();
                this.label1 = new System.Windows.Forms.Label();
                this.textBox1 = new System.Windows.Forms.TextBox();
                this.resultListBox = new System.Windows.Forms.ListBox();
                this.browseButton = new System.Windows.Forms.Button();
+               this.browseFileDBox = new System.Windows.Forms.OpenFileDialog();
                this.SuspendLayout();
                // 
                // searchButton
@@ -78,6 +78,11 @@
                this.browseButton.TabIndex = 4;
                this.browseButton.Text = "Browse";
                this.browseButton.UseVisualStyleBackColor = true;
+               this.browseButton.Click += new System.EventHandler(this.browseButton_Click);
+               // 
+               // browseFileDBox
+               // 
+               this.browseFileDBox.FileName = "openFileDialog1";
                // 
                // simpleTextSearch
                // 
@@ -98,13 +103,12 @@
           }
 
           #endregion
-
-          private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
           private System.Windows.Forms.Button searchButton;
           private System.Windows.Forms.Label label1;
           private System.Windows.Forms.TextBox textBox1;
           private System.Windows.Forms.ListBox resultListBox;
           private System.Windows.Forms.Button browseButton;
+          private System.Windows.Forms.OpenFileDialog browseFileDBox;
      }
 }
 

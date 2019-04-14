@@ -25,5 +25,16 @@ namespace SimpleTextSearch
           {
 
           }
+
+          private void browseButton_Click(object sender, EventArgs e)
+          {
+
+               browseFileDBox.ShowDialog();
+
+               if (DialogResult == DialogResult.OK)
+               {
+                    
+               }
+          }
      }
 }
